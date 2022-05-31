@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "createdBy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "fillColor": {
+                  "type": "string"
+                },
+                "iconShape": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "textColor": {
+                  "type": "string"
+                },
+                "tooltip": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fillColor",
+                "iconShape",
+                "iconUrl",
+                "textColor",
+                "tooltip",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "fillColor": {
+                  "type": "string"
+                },
+                "iconShape": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "textColor": {
+                  "type": "string"
+                },
+                "tooltip": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fillColor",
+                "iconShape",
+                "iconUrl",
+                "textColor",
+                "tooltip",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "fillColor": {
+                  "type": "string"
+                },
+                "iconShape": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "textColor": {
+                  "type": "string"
+                },
+                "tooltip": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fillColor",
+                "iconShape",
+                "iconUrl",
+                "textColor",
+                "tooltip",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "fillColor": {
+                  "type": "string"
+                },
+                "iconShape": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "textColor": {
+                  "type": "string"
+                },
+                "tooltip": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fillColor",
+                "iconShape",
+                "iconUrl",
+                "textColor",
+                "tooltip",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "fillColor": {
+                  "type": "string"
+                },
+                "iconShape": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "textColor": {
+                  "type": "string"
+                },
+                "tooltip": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fillColor",
+                "iconShape",
+                "iconUrl",
+                "textColor",
+                "tooltip",
+                "value"
+              ]
+            }
+          ]
+        },
+        "owned": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "fields",
+        "owned",
+        "title"
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ]
+    },
+    "modifiedAt": {
+      "type": "string"
+    },
+    "modifiedBy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ]
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "origin": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "origin"
+      ]
+    },
+    "style": {
+      "type": "object",
+      "properties": {
+        "fillColor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fillColor"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "links",
+    "createdAt",
+    "createdBy",
+    "data",
+    "geometry",
+    "modifiedAt",
+    "modifiedBy",
+    "position",
+    "style"
+  ]
+}

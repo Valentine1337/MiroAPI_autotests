@@ -1,0 +1,260 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        },
+        "related": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self",
+        "related"
+      ]
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "createdBy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "name"
+      ]
+    },
+    "currentUserMembership": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "name",
+        "role"
+      ]
+    },
+    "modifiedAt": {
+      "type": "string"
+    },
+    "modifiedBy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "name"
+      ]
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "name"
+      ]
+    },
+    "permissionsPolicy": {
+      "type": "object",
+      "properties": {
+        "collaborationToolsStartAccess": {
+          "type": "string"
+        },
+        "copyAccess": {
+          "type": "string"
+        },
+        "copyAccessLevel": {
+          "type": "string"
+        },
+        "sharingAccess": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "collaborationToolsStartAccess",
+        "copyAccess",
+        "copyAccessLevel",
+        "sharingAccess"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "permissionsPolicy": {
+          "type": "object",
+          "properties": {
+            "collaborationToolsStartAccess": {
+              "type": "string"
+            },
+            "copyAccess": {
+              "type": "string"
+            },
+            "copyAccessLevel": {
+              "type": "string"
+            },
+            "sharingAccess": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "collaborationToolsStartAccess",
+            "copyAccess",
+            "copyAccessLevel",
+            "sharingAccess"
+          ]
+        },
+        "sharingPolicy": {
+          "type": "object",
+          "properties": {
+            "access": {
+              "type": "string"
+            },
+            "inviteToAccountAndBoardLinkAccess": {
+              "type": "string"
+            },
+            "organizationAccess": {
+              "type": "string"
+            },
+            "teamAccess": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "access",
+            "inviteToAccountAndBoardLinkAccess",
+            "organizationAccess",
+            "teamAccess"
+          ]
+        }
+      },
+      "required": [
+        "permissionsPolicy",
+        "sharingPolicy"
+      ]
+    },
+    "sharingPolicy": {
+      "type": "object",
+      "properties": {
+        "access": {
+          "type": "string"
+        },
+        "inviteToAccountAndBoardLinkAccess": {
+          "type": "string"
+        },
+        "organizationAccess": {
+          "type": "string"
+        },
+        "teamAccess": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "access",
+        "inviteToAccountAndBoardLinkAccess",
+        "organizationAccess",
+        "teamAccess"
+      ]
+    },
+    "team": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "name"
+      ]
+    },
+    "viewLink": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "description",
+    "links",
+    "createdAt",
+    "createdBy",
+    "currentUserMembership",
+    "modifiedAt",
+    "modifiedBy",
+    "owner",
+    "permissionsPolicy",
+    "policy",
+    "sharingPolicy",
+    "team",
+    "viewLink"
+  ]
+}

@@ -1,5 +1,5 @@
 # Проект по автотестированию интернет-магазина [Miro](https://developers.miro.com/reference/api-reference)
-[<img alt="Ozon" height="100" src="images/logo/miro.png" width="500"/>](https://miro.com/)
+[<img alt="Ozon" height="150" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_api/master/images/logo/miro.png" width="500"/>](https://miro.com/)
 
 ## Содержание:
 

@@ -1,41 +1,51 @@
-# Проект по автотестированию интернет-магазина [Miro](https://developers.miro.com/reference/api-reference)
+# Проект по автотестированию API [Miro](https://developers.miro.com/reference/api-reference)
 [<img alt="Ozon" height="150" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_api/master/images/logo/miro.png" width="500"/>](https://miro.com/)
 
-## Содержание:
-
-* [Технологии, используемые в данном проекте](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC%D1%8B%D0%B5-%D0%B2-%D0%B4%D0%B0%D0%BD%D0%BD%D0%BE%D0%BC-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B5)
-* [Тест кейсы](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%82%D0%B5%D1%81%D1%82-%D0%BA%D0%B5%D0%B9%D1%81%D1%8B)
-* [Сборка в Jenkins](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2-jenkins)
-* [Информация о тестах в Allure report]()
-* [Интеграция с AllureTestOps]()
-* [Уведомления в Telegram]()
-* [Пример аттачей]()
-
+<a name="оглавление"></a>
+# Оглавление
+1. [Технологии](#технологии)
+2. [Описание проекта](#описание)
+3. [Запуск тестов](#запуск_локально)
+    1. [Запуск тестов локально](#запуск_локально)
+    2. [Запуск тестов в Jenkins](#запуск_дженкинс)
+4. [Jenkins](#дженкинс)
+5. [Результаты тестов в телеграм](#телеграм)
+6. [Allure TestOps](#проект)
+    1. [Проект](#проект)
+    2. [Интеграция с Jenkins](#интеграция)
+    3. [Dashboard](#дашборд)
+    
+<a name="технологии"></a>   
 ## Технологии, используемые в данном проекте
+[<img alt="Java" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Java.svg" width="100"/>](https://www.java.com/)
+[<img alt="IDEA" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Idea.svg" width="100"/>](https://www.jetbrains.com/idea/)
+[<img alt="Ozon" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_api/master/images/logo/rest-assured-logo.svg" width="100"/>](https://rest-assured.io/)
+[<img alt="Github" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/GitHub.svg" width="100"/>](https://github.com/)
+[<img alt="JUnit 5" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Junit5.svg" width="100"/>](https://junit.org/junit5/)
+[<img alt="Gradle" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Gradle.svg" width="100"/>](https://gradle.org/)
+[<img alt="Allure" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg" width="100"/>](https://github.com/allure-framework/allure2)
+[<img alt="Allure_EE" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg" width="100"/>](https://qameta.io/)
+[<img alt="Jenkins" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg" width="100"/>](https://www.jenkins.io/)
 
-[<img alt="Java" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Java.svg" width="50"/>](https://www.java.com/)
-[<img alt="IDEA" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Idea.svg" width="50"/>](https://www.jetbrains.com/idea/)
-[<img alt="Appium" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Appium.svg" width="50"/>](https://appium.io/)
-[<img alt="Selenide" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Selenide.svg" width="50"/>](https://ru.selenide.org/)
-[<img alt="Selenoid" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Selenoid.svg" width="50"/>](https://aerokube.com/selenoid/latest/)
-[<img alt="Android" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Android.svg" width="50"/>](https://developer.android.com/studio)
-[<img alt="Browserstack" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Browserstack.svg" width="50"/>](https://www.browserstack.com/)
-[<img alt="Github" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/GitHub.svg" width="50"/>](https://github.com/)
-[<img alt="JUnit 5" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Junit5.svg" width="50"/>](https://junit.org/junit5/)
-[<img alt="Gradle" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Gradle.svg" width="50"/>](https://gradle.org/)
-[<img alt="Allure" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg" width="50"/>](https://github.com/allure-framework/allure2)
-[<img alt="Allure_EE" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg" width="50"/>](https://qameta.io/)
-[<img alt="Jenkins" height="50" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg" width="50"/>](https://www.jenkins.io/)
+[К оглавлению ⬆](#оглавление)
+<a name="описание"></a>
+# Описание проекта
+Автоматизирована проверка 4 методов API:
+- /boards - создание доски с различными параметрами приватности;
+- /boards/{board_id}/members - поделиться доской с выбранными пользователями;
+- /boards/{board_id}/app_cards - добавить карточку на доску различной формы, цветы, содержания;
+- /boards/{board_id}/tags - добавить тэги на доску различных цветов и названий.
 
-В данном проекте автотесты написаны на **Java** с использованием фреймворков для тестирования **Selenide**. Для сборки проекта в среде **IntelliJ IDEA** используется **Gradle**.
-**JUnit5** задействован в качестве фреймворка модульного тестирования. Запуск тестов выполняется из **Jenkins**. **Selenoid** используется для запуска браузеров в контейнерах **Docker**.
-
-**Browserstack** используется для запуска мобильных тестов, для запуска на эмуляторе используются **Android Studio** и **Appium**. **Allure Report**, **AllureTestOps** и **Telegram Bot** используются для визуализации результатов тестирования.
+Используются:
+- модели (Lombok),
+- спецификации (RequestSpecification),
+- генерация тестовых данных (Faker),
+- конфигурации (Owner),
+- проверки (AssertJ),
+- шаблоны логирования запросов (AllureRestAssured FILTERS),
+- схемы проверки JSON Schema Validator.
 
 ## Тест кейсы
-
-### Тест кейсы для UI web тестирования
-
 ✓ Добавление товара в избранное
 
 ✓ Добавление товара в корзину через поиск
@@ -53,18 +63,6 @@
 ✓ Поиск новостей в разделе 'Новости'
 
 ✓ Работоспособность всех кнопок 'Начать продавать'
-
-### Тест кейсы для UI mobile тестирования
-
-✓ Отображение значка 'Поделиться' в рекламном банере
-
-✓ Напоминания в разделе с лайв видео
-
-✓ Фильтры в разделе 'Пункты выдачи на карте' в профиле
-
-✓ Необходимость авторизации для добавления видео в 'Моменты'
-
-✓ Работоспособность функции 'Скан товара'
 
 ## [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
     gradle clean ${TYPE_OF_UI_TESTS}
@@ -126,14 +124,3 @@ _Графики мобильных тестов_
 
 ### Для web тестов
 ![](images/screenshots/telegram-bot.jpg)
-
-## Пример аттачей
-К каждому тесту в Allure прикрепляется видеопрохождение, скриншот последнего экрана и код страницы
-
-### Видео прохождения web тестов (пример)
-
-![](images/screenshots/web.gif)
-
-### Видео прохождения mobile тестов (пример)
-
-![](images/screenshots/mobile.gif)

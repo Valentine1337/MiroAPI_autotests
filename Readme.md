@@ -3,31 +3,28 @@
 
 <a name="оглавление"></a>
 # Оглавление
-1. [Технологии](#технологии)
-2. [Описание проекта](#описание)
-3. [Запуск тестов](#запуск_локально)
-    1. [Запуск тестов локально](#запуск_локально)
-    2. [Запуск тестов в Jenkins](#запуск_дженкинс)
-4. [Jenkins](#дженкинс)
-5. [Результаты тестов в телеграм](#телеграм)
-6. [Allure TestOps](#проект)
-    1. [Проект](#проект)
-    2. [Интеграция с Jenkins](#интеграция)
-    3. [Dashboard](#дашборд)
-    
-<a name="технологии"></a>   
-## Технологии, используемые в данном проекте
-[<img alt="Java" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Java.svg" width="100"/>](https://www.java.com/)
-[<img alt="IDEA" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Idea.svg" width="100"/>](https://www.jetbrains.com/idea/)
-[<img alt="Ozon" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_api/master/images/logo/rest-assured-logo.svg" width="100"/>](https://rest-assured.io/)
-[<img alt="Github" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/GitHub.svg" width="100"/>](https://github.com/)
-[<img alt="JUnit 5" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Junit5.svg" width="100"/>](https://junit.org/junit5/)
-[<img alt="Gradle" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Gradle.svg" width="100"/>](https://gradle.org/)
-[<img alt="Allure" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg" width="100"/>](https://github.com/allure-framework/allure2)
-[<img alt="Allure_EE" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg" width="100"/>](https://qameta.io/)
-[<img alt="Jenkins" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg" width="100"/>](https://www.jenkins.io/)
+- [Технологии и инструменты](#computer-технологии-и-инструменты)
+- [Реализованные проверки](#boom-Реализованные-проверки)
+- [Сборка в Jenkins](#-сборка-в-jenkins)
+- [Запуск из терминала](#computer-Запуск-тестов-из-терминала)
+- [Отчет в Allure report](#-отчет-в-allure-report)
+- [Отчет в Telegram](#-уведомление-в-telegram-при-помощи-бота)
+- [Видео пример прохождения тестов](#-видео-пример-прохождения-теста)
 
-[К оглавлению ⬆](#оглавление)
+## :computer: Технологии и инструменты
+<p align="center">
+<img height="100" title="Java" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Java.svg" width="100"/>
+<img height="100" title="IntelliJ IDEA" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Idea.svg" width="100"/>
+<img height="100" title="Rest-Assured" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_api/master/images/logo/rest-assured-logo.svg" width="100"/>
+<img height="100" title="Github" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/GitHub.svg" width="100"/>
+<img height="100" title="JUnit 5" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Junit5.svg" width="100"/>
+<img height="100" title="Gradle" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Gradle.svg" width="100"/>
+<img height="100" title="Allure" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg" width="100"/>
+<img height="100" title="Allure TestOps" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg" width="100"/>
+<img height="100" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg" width="100"/>
+<img height="100" title="Telegram" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Telegram.svg" width="100"/>
+</p>
+
 <a name="описание"></a>
 # Описание проекта
 Автоматизирована проверка 4 методов API:
@@ -46,23 +43,11 @@
 - схемы проверки JSON Schema Validator.
 
 ## Тест кейсы
-✓ Добавление товара в избранное
-
-✓ Добавление товара в корзину через поиск
-
-✓ Добавление нескольких товаров в список сравнения
-
-✓ Добавление подарочных сертификатов с разным номиналом
-
-✓ Функция 'Узнать о снижении цены' в разделе подарочных сертификатов
-
-✓ Подсказки 'Поддержка производителя' у подарочного сертификата
-
-✓ Выпадающие меню в разделе 'Помощь'
-
-✓ Поиск новостей в разделе 'Новости'
-
-✓ Работоспособность всех кнопок 'Начать продавать'
+>- [x] Добавление товара в избранное
+>- [x] Добавление товара в корзину через поиск
+>- [x] Добавление нескольких товаров в список сравнения
+>- [x] Добавление подарочных сертификатов с разным номиналом
+>- [x] Функция 'Узнать о снижении цены' в разделе подарочных сертификатов
 
 ## [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
     gradle clean ${TYPE_OF_UI_TESTS}

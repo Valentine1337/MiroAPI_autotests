@@ -1,8 +1,7 @@
 # Проект по автотестированию API [Miro](https://developers.miro.com/reference/api-reference)
 [<img alt="Ozon" height="150" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_api/master/images/logo/miro.png" width="500"/>](https://miro.com/)
 
-<a name="оглавление"></a>
-# Оглавление
+# Содержание
 - [Технологии и инструменты](#computer-технологии-и-инструменты)
 - [Описание проекта](#clipboard-описание-проекта)
 - [Сборка в Jenkins](#-сборка-в-jenkins)
@@ -24,7 +23,6 @@
 <img height="100" title="Telegram" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Telegram.svg" width="100"/>
 </p>
 
-<a name="описание"></a>
 ## :clipboard: Описание проекта
 Автоматизирована проверка 4 методов API:
 - /boards - создание доски с различными параметрами приватности;

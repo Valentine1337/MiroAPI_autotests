@@ -7,8 +7,4 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Style {
     private String fillColor;
-
-    public Style setColor(String color) {
-        return setColor(color);
-    }
 }

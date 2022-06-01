@@ -6,7 +6,5 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateTagResponse {
-    private String type,
-            title,
-            fillColor;
+    private String type, title, fillColor;
 }

@@ -8,10 +8,9 @@ import lombok.Data;
 public class Geometry {
     private Integer height, width, rotation;
 
-    public Geometry setGeometry(Integer rotation) {
+    public void setGeometry(Integer rotation) {
         setHeight(500);
         setWidth(500);
         setRotation(rotation);
-        return this;
     }
 }

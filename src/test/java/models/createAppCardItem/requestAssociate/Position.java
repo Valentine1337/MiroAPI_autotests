@@ -9,10 +9,9 @@ public class Position {
     private String origin;
     private double x, y;
 
-    public Position setPosition(double x, double y) {
+    public void setPosition(double x, double y) {
         setOrigin("center");
         setX(x);
         setY(y);
-        return this;
     }
 }

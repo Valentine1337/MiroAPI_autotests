@@ -7,13 +7,11 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateTagRequest {
-    private String fillColor,
-            title;
+    private String fillColor, title;
 
-    public CreateTagRequest createTagWithCustomColorAndTitle(String color) {
+    public void createTagWithCustomColorAndTitle(String color) {
         Faker faker = new Faker();
         setFillColor(color);
         setTitle(faker.random().hex());
-        return this;
     }
 }

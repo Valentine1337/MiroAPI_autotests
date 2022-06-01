@@ -15,47 +15,44 @@ public class CreateAppCardItemRequest {
     private Position position = new Position();
     private Geometry geometry = new Geometry();
 
-    public CreateAppCardItemRequest makeBlueRoundsInvertedWithPurpleColor() {
-        data.makeThreeBlueRoundWithCatAndTextObject("Tooltip test",
+    //Main methods for test requests
+    public void makeThreeBlueRoundsInvertedWithPurpleColor() {
+        data.makeBlueRoundsWithCatAndTextObject("Tooltip test",
                 "Value for tooltip is here", 3, "round");
         data.setTitleAndDescription("Sample app card", "Autotest sample three blue rounds with purple");
         style.setFillColor("#b62fe3");
         position.setPosition(100.1, 105.2);
         geometry.setGeometry(180);
-        return this;
     }
 
-    public CreateAppCardItemRequest makeBlueSquaresStraightWithYellowColor() {
-        data.makeThreeBlueRoundWithCatAndTextObject("Tooltip test",
+    public void makeFiveBlueSquaresStraightWithYellowColor() {
+        data.makeBlueRoundsWithCatAndTextObject("Tooltip test",
                 "Value for tooltip is here", 5, "square");
         data.setTitleAndDescription("Sample app card", "Autotest sample five blue squares with yellow");
         style.setFillColor("#dde32f");
         position.setPosition(115.1, 120.2);
         geometry.setGeometry(0);
-        return this;
     }
 
-
+    //Class for json object 'Data'
     @lombok.Data
     @JsonIgnoreProperties(ignoreUnknown = true)
     static class Data {
         private Fields[] fields;
         private String title, description;
 
-        public Data makeThreeBlueRoundWithCatAndTextObject(String tooltip, String value,
-                                                           Integer quantity, String figure) {
+        public void makeBlueRoundsWithCatAndTextObject(String tooltip, String value,
+                                                       Integer quantity, String figure) {
             fields = new Fields[quantity];
             for (int i = 0; i < fields.length; i++) {
                 fields[i] = new Fields();
                 fields[i].makeBlueRoundWithCatAndText(tooltip, value,figure);
             }
-            return this;
         }
 
-        public Data setTitleAndDescription(String title, String description) {
+        public void setTitleAndDescription(String title, String description) {
             setTitle(title);
             setDescription(description);
-            return this;
         }
     }
 }

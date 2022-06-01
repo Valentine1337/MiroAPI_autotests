@@ -12,22 +12,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PermissionsPolicy {
-    private String
-            collaborationToolsStartAccess,
-            copyAccess,
-            sharingAccess;
+    private String collaborationToolsStartAccess, copyAccess, sharingAccess;
 
-    public PermissionsPolicy setOpenPermissionsPolicy() {
+    public void setOpenPermissionsPolicy() {
         setCollaborationToolsStartAccess("all_editors");
         setCopyAccess("anyone");
         setSharingAccess("team_members_with_editing_rights");
-        return this;
     }
 
-    public PermissionsPolicy setPrivatePermissionsPolicy() {
+    public void setPrivatePermissionsPolicy() {
         setCollaborationToolsStartAccess("board_owners_and_coowners");
         setCopyAccess("board_owner");
         setSharingAccess("owner_and_coowners");
-        return this;
     }
 }

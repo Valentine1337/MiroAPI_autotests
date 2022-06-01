@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import models.createAppCardItem.CreateAppCardItemRequest;
 import models.createAppCardItem.CreateAppCardItemResponse;
 import models.createBoard.CreateBoardRequest;
@@ -20,10 +21,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static specs.Specs.*;
 
 public class ApiTests {
-    //Test common data
+    //Tests common data
     final String testBoardID = apiConfig.testBoardId();
 
     @Test
+    @Owner("valentin.gordeev")
     @DisplayName("Создание доски с открытым доступом")
     void createBoardWithOpenPolicy() {
         //Test data for this case
@@ -51,6 +53,7 @@ public class ApiTests {
     }
 
     @Test
+    @Owner("valentin.gordeev")
     @DisplayName("Шэрим доску двум почтовым адресам")
     void shareBoardWithDefaultParams() {
         //Test data for this case
@@ -75,10 +78,11 @@ public class ApiTests {
     }
 
     @Test
+    @Owner("valentin.gordeev")
     @DisplayName("Создаем на доске карточку с 3 синими кругами, повернутыми на 180 градусов, фиолетового цвета")
     void createAppCardItemThreeBlueRoundWithPurpleColor() {
         CreateAppCardItemRequest request = new CreateAppCardItemRequest();
-        request.makeBlueRoundsInvertedWithPurpleColor();
+        request.makeThreeBlueRoundsInvertedWithPurpleColor();
         step("Отправляем запрос на создание трех синих кругов, повернутых на 180 градусов с фиолетовой рамкой");
         CreateAppCardItemResponse response =
                 given()
@@ -100,10 +104,11 @@ public class ApiTests {
     }
 
     @Test
+    @Owner("valentin.gordeev")
     @DisplayName("Создаем на доске карточку с 5 синими квадратами и желтой рамкой")
     void createAppCardItemBThreeBlueSquareWithYellowColor() {
         CreateAppCardItemRequest request = new CreateAppCardItemRequest();
-        request.makeBlueSquaresStraightWithYellowColor();
+        request.makeFiveBlueSquaresStraightWithYellowColor();
         step("Отправляем запрос на создание 5 синих квадратов с желтой рамкой");
         CreateAppCardItemResponse response =
                 given()
@@ -125,6 +130,7 @@ public class ApiTests {
     }
 
     @Test
+    @Owner("valentin.gordeev")
     @DisplayName("Создание тэга на доске")
     void createTag() {
         //Test data for this case
@@ -133,8 +139,8 @@ public class ApiTests {
         CreateTagRequest request = new CreateTagRequest();
 
         step("Отправляем запросы на проверку всех цветов");
-        for (int i = 0; i < availableColors.length; i++) {
-            request.createTagWithCustomColorAndTitle(availableColors[i]);
+        for (String availableColor : availableColors) {
+            request.createTagWithCustomColorAndTitle(availableColor);
             CreateTagResponse response =
                     given()
                             .spec(requestSpec)

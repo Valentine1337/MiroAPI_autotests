@@ -17,12 +17,11 @@ public class SharingPolicy {
     private String organizationAccess;
     private String teamAccess;
 
-    public SharingPolicy setOpenSharingPolicy() {
+    public void setOpenSharingPolicy() {
         setAccess("edit");
         setInviteToAccountAndBoardLinkAccess("editor");
         setOrganizationAccess("private");
         setTeamAccess("edit");
-        return this;
     }
 
     public void setPrivateSharingPolicy() {

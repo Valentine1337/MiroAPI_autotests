@@ -6,10 +6,8 @@
 - [Технологии и инструменты](#computer-технологии-и-инструменты)
 - [Описание проекта](Описание-проекта)
 - [Сборка в Jenkins](#-сборка-в-jenkins)
-- [Запуск из терминала](#computer-Запуск-тестов-из-терминала)
-- [Отчет в Allure report](#-отчет-в-allure-report)
-- [Отчет в Telegram](#-уведомление-в-telegram-при-помощи-бота)
-- [Видео пример прохождения тестов](#-видео-пример-прохождения-теста)
+- [Отчеты и информация о тестах в Allure report](#-отчет-в-allure-report)
+- [Уведомления в Telegram](#-уведомление-в-telegram-при-помощи-бота)
 
 ## :computer: Технологии и инструменты
 <p align="center">
@@ -26,7 +24,7 @@
 </p>
 
 <a name="описание"></a>
-# Описание проекта
+## Описание проекта
 Автоматизирована проверка 4 методов API:
 - /boards - создание доски с различными параметрами приватности;
 - /boards/{board_id}/members - поделиться доской с выбранными пользователями;
@@ -42,16 +40,16 @@
 - шаблоны логирования запросов (AllureRestAssured FILTERS),
 - схемы проверки JSON Schema Validator.
 
-## Тест кейсы
+### Тест кейсы
 >- [x] Создание на доске карточки с 3 синими кругами, повернутыми на 180 градусов, фиолетового цвета
 >- [x] Создание на доске карточки с 5 синими квадратами и желтой рамкой
 >- [x] Создание доски с открытым доступом
 >- [x] Расшарить доску двум почтовым адресам
 >- [x] Создание тэга на доске
 
-## [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/)
+## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/)
 ![](images/screenshots/jenkins.jpg)
-Локальный запуск осуществляется командой:
+Запуск осуществляется командой:
 ```
 gradle clean test -Dthreads=4
 ```
@@ -62,7 +60,7 @@ gradle clean test -Dthreads=4
 ![](images/screenshots/jenkins2.jpg)
 В поле коммент можно ввести уточняющие данные, которые затем отобразятся в отчете, например дату запуска.
 
-## Информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/allure/)
+## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg"> Отчеты и информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/allure/)
 
 ### Главное окно
 
@@ -82,7 +80,7 @@ _Пример вложения запроса_
 _Пример вложения ответа_
 
 
-## Интеграция с [AllureTestOps](https://allure.autotests.cloud/project/1365/dashboards)
+## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg"> Интеграция с [AllureTestOps](https://allure.autotests.cloud/project/1365/dashboards)
 
 ### Дашборд проекта
 
@@ -91,9 +89,8 @@ _Пример вложения ответа_
 ### Список автотестов
 ![](images/screenshots/allure_ee2.jpg)
 
-## Уведомления в Telegram
+## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Telegram.svg"> Уведомления в Telegram
 
-После завершения тестов отчет о прохождении приходит в Telegram с помощью заранее созданного бота
+После завершения тестов отчет о прохождении приходит в Telegram с помощью заранее созданного бота:
 
-### Для web тестов
 ![](images/screenshots/telegram_bot.jpg)

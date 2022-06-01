@@ -4,10 +4,11 @@
 <a name="оглавление"></a>
 # Оглавление
 - [Технологии и инструменты](#computer-технологии-и-инструменты)
-- [Описание проекта](Описание-проекта)
+- [Описание проекта](#clipboard-описание-проекта)
 - [Сборка в Jenkins](#-сборка-в-jenkins)
-- [Отчеты и информация о тестах в Allure report](#-отчет-в-allure-report)
-- [Уведомления в Telegram](#-уведомление-в-telegram-при-помощи-бота)
+- [Отчеты и информация о тестах в Allure report](#-отчеты-и-информация-о-тестах-в-allure-report)
+- [Интеграция с AllureTestOps](#-интеграция-с-alluretestops)
+- [Уведомления в Telegram](#-уведомления-в-telegram)
 
 ## :computer: Технологии и инструменты
 <p align="center">
@@ -47,6 +48,7 @@
 >- [x] Расшарить доску двум почтовым адресам
 >- [x] Создание тэга на доске
 
+[К содержанию ⬆](#содержание)
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/)
 ![](images/screenshots/jenkins.jpg)
 Запуск осуществляется командой:
@@ -59,6 +61,8 @@ gradle clean test -Dthreads=4
 
 ![](images/screenshots/jenkins2.jpg)
 В поле коммент можно ввести уточняющие данные, которые затем отобразятся в отчете, например дату запуска.
+
+[К содержанию ⬆](#содержание)
 
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg"> Отчеты и информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/allure/)
 
@@ -79,6 +83,7 @@ _Пример вложения запроса_
 ![](images/screenshots/response_allure.jpg)
 _Пример вложения ответа_
 
+[К содержанию ⬆](#содержание)
 
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg"> Интеграция с [AllureTestOps](https://allure.autotests.cloud/project/1365/dashboards)
 
@@ -88,6 +93,8 @@ _Пример вложения ответа_
 
 ### Список автотестов
 ![](images/screenshots/allure_ee2.jpg)
+
+[К содержанию ⬆](#содержание)
 
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Telegram.svg"> Уведомления в Telegram
 

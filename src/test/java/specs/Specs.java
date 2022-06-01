@@ -16,7 +16,7 @@ public class Specs {
             with()
                     .filter(withCustomTemplates())
                     .baseUri("https://api.miro.com/v2")
-                    .auth().oauth2("eyJtaXJvLm9yaWdpbiI6ImV1MDEifQ_RsUMh5eP7LkTax_ahQZT_QeY7hM")
+                    .auth().oauth2(apiConfig.token())
                     .accept("application/json")
                     .contentType(ContentType.JSON)
                     .log().body();

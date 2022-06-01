@@ -12,6 +12,7 @@ import models.shareBoard.ShareBoardResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static config.Api.apiConfig;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -20,7 +21,7 @@ import static specs.Specs.*;
 
 public class ApiTests {
     //Test common data
-    final String testBoardID = "uXjVOwr-MbQ=";
+    final String testBoardID = apiConfig.testBoardId();
 
     @Test
     @DisplayName("Создание доски с открытым доступом")

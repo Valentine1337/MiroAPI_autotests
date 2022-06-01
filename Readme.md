@@ -43,35 +43,26 @@
 - схемы проверки JSON Schema Validator.
 
 ## Тест кейсы
->- [x] Добавление товара в избранное
->- [x] Добавление товара в корзину через поиск
->- [x] Добавление нескольких товаров в список сравнения
->- [x] Добавление подарочных сертификатов с разным номиналом
->- [x] Функция 'Узнать о снижении цены' в разделе подарочных сертификатов
+>- [x] Создание на доске карточки с 3 синими кругами, повернутыми на 180 градусов, фиолетового цвета
+>- [x] Создание на доске карточки с 5 синими квадратами и желтой рамкой
+>- [x] Создание доски с открытым доступом
+>- [x] Расшарить доску двум почтовым адресам
+>- [x] Создание тэга на доске
 
-## [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
-    gradle clean ${TYPE_OF_UI_TESTS}
-    -DstandHost=${STAND}
-    -DdeviceHost=${HOST_OF_MOBILE_TESTS}
-    -Dthreads=${THREADS}
-![](images/screenshots/Jenkins_2.png)
-В данной сборке указаны следующие параметры:
+## [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/)
+![](images/screenshots/jenkins.jpg)
+Локальный запуск осуществляется командой:
+```
+gradle clean test -Dthreads=4
+```
+Где `threads` - количество потоков параллельного запуска тестов.
 
-_${TYPE_OF_UI_TESTS}_ - тип тестов web или mobile (возможен запуск **web тестов** - в **selenoid**,
-**mobile тестов** - в **Browserstack**, на эмуляторе в **Android Studio** c
-помощью сервера **Appium**)
+Остальные 2 параметра `token` и `testBoardId` указываются в файле .properties, пример лежит в папке **resources**.
 
-_standHost_ - стенд (опция пустая, добавлена ради эмуляции боевого проекта). Указывается в виде URL **https://www.ozon.ru**, **https://www.test-ozon.ru** как пример.
+![](images/screenshots/jenkins2.jpg)
+В поле коммент можно ввести уточняющие данные, которые затем отобразятся в отчете, например дату запуска.
 
-_deviceHost_ - хост для мобильных тестов (**Browserstack**, **emulator**)
-
-_threads_ - количество потоков для запуска теста (от null до 4)
-
-Остальные опции настраиваются с помощью файла .properties, пример лежит в папке **resources**.
-
-![](images/screenshots/Jenkins_2.png)
-
-## Информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
+## Информация о тестах в [Allure report](https://allure.autotests.cloud/project/1365/dashboards)
 
 ### Главное окно
 

@@ -62,41 +62,38 @@ gradle clean test -Dthreads=4
 ![](images/screenshots/jenkins2.jpg)
 В поле коммент можно ввести уточняющие данные, которые затем отобразятся в отчете, например дату запуска.
 
-## Информация о тестах в [Allure report](https://allure.autotests.cloud/project/1365/dashboards)
+## Информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_Miro_API/allure/)
 
 ### Главное окно
 
-![](images/screenshots/Allure_1.jpg)
-_Мобильные тесты_
+![](images/screenshots/allure.jpg)
+_Дашбоард_
 
 ### Окно с тест-кейсами
 
-![](images/screenshots/Allure_2.png)
-_Веб тесты_
+![](images/screenshots/allure2.jpg)
 
-### Окно с графиками
+### Окно с вложениями
 
-![](images/screenshots/Allure_3.jpg)
-_Графики веб тестов_
+![](images/screenshots/request_allure.jpg)
+_Пример вложения запроса_
 
-![](images/screenshots/Allure_4.jpg)
-_Мобильные тесты_
+![](images/screenshots/response_allure.jpg)
+_Пример вложения ответа_
 
-![](images/screenshots/Allure_5.jpg)
-_Графики мобильных тестов_
 
-## Интеграция с [AllureTestOps](https://allure.autotests.cloud/project/1329/dashboards)
+## Интеграция с [AllureTestOps](https://allure.autotests.cloud/project/1365/dashboards)
 
 ### Дашборд проекта
 
-![](images/screenshots/Allure_TO.jpg)
+![](images/screenshots/allure_ee.jpg)
 
-### Список ручных и автотестов
-![](images/screenshots/Allure_TO2.jpg)
+### Список автотестов
+![](images/screenshots/allure_ee2.jpg)
 
 ## Уведомления в Telegram
 
 После завершения тестов отчет о прохождении приходит в Telegram с помощью заранее созданного бота
 
 ### Для web тестов
-![](images/screenshots/telegram-bot.jpg)
+![](images/screenshots/telegram_bot.jpg)

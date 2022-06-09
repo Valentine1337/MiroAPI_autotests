@@ -12,7 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PermissionsPolicy {
-    private String collaborationToolsStartAccess, copyAccess, sharingAccess;
+    private String
+            collaborationToolsStartAccess,
+            copyAccess,
+            sharingAccess;
 
     public void setOpenPermissionsPolicy() {
         setCollaborationToolsStartAccess("all_editors");

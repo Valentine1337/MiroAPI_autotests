@@ -7,7 +7,9 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateTagRequest {
-    private String fillColor, title;
+    private String
+            fillColor,
+            title;
 
     public void createTagWithCustomColorAndTitle(String color) {
         Faker faker = new Faker();

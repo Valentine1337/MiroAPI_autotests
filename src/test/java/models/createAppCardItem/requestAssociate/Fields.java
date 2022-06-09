@@ -6,7 +6,8 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Fields {
-        private String iconShape,
+        private String
+                iconShape,
                 fillColor,
                 iconUrl,
                 textColor,

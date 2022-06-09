@@ -6,7 +6,10 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Geometry {
-    private Integer height, width, rotation;
+    private Integer
+            height,
+            width,
+            rotation;
 
     public void setGeometry(Integer rotation) {
         setHeight(500);

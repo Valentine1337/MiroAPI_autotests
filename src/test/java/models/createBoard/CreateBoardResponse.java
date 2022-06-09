@@ -13,6 +13,9 @@ import models.createBoard.requestAssociate.Policy;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateBoardResponse {
-    private String type, name, description;
+    private String
+            type,
+            name,
+            description;
     private Policy policy;
 }
